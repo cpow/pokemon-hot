@@ -1,0 +1,20 @@
+{{#bs-navbar
+  class='navbar-default navbar-fixed-top'
+  name='A cpow joint'
+  homeRoute='pokemon'
+}}
+  {{#link-to 'pokemon.new' tagName='li'}}
+    {{link-to 'New Pokemon' 'pokemon.new'}}
+  {{/link-to}}
+  {{#link-to 'pokemon.show' tagName='li'}}
+    {{link-to 'Rate Pokemon Now' 'pokemon.show'}}
+  {{/link-to}}
+{{/bs-navbar}}
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  {{outlet}}
+</div>
