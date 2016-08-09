@@ -7,10 +7,10 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    savePokemon(pokemon) {
-      pokemon.save().then(() => {
-        this.transitionTo('pokemon.show', pokemon.get('id'));
-      });
+    save() {
+      const pokemon = this.get('controller.model');
+      pokemon.save();
+      this.transitionTo('pokemon.show', pokemon);
     },
   }
 });

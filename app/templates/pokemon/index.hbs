@@ -6,11 +6,16 @@
     </p>
 
     <p>
-      {{#link-to "pokemon.show" class="btn btn-primary btn-lg"}}
+      {{#link-to "pokemon.rate" class="btn btn-primary btn-lg"}}
         Check it out
       {{/link-to}}
     </p>
   </div>
 </div>
+
+{{#each model as |pokemon|}}
+  {{pokemon.name}}
+  {{pokemon.imageURL}}
+{{/each}}
 
 {{outlet}}

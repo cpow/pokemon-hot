@@ -2,6 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: {
+      apiKey: "AIzaSyDHF1D60IISc2tONMELAPuc3exXCEsw1VU",
+      authDomain: "pokehot-or-pokenot.firebaseapp.com",
+      databaseURL: "https://pokehot-or-pokenot.firebaseio.com",
+      storageBucket: "pokehot-or-pokenot.appspot.com",
+    },
     modulePrefix: 'pokemon-hot',
     environment: environment,
     rootURL: '/',

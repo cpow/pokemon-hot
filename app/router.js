@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('pokemon', {path: '/'}, function(){
     this.route('show', {path:'/pokemon/:id'});
     this.route('new');
+    this.route('rate', {path: '/pokemon/rate'});
   });
 });
 
