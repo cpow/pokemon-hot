@@ -1,0 +1,26 @@
+img.pokemon-profile {
+  max-height: 200px;
+}
+img.pokemon-large-profile {
+  max-height: 800px;
+}
+ul {
+  list-style-type: none;
+}
+.poke-profile-image {
+  float: left;
+  padding: 10px;
+}
+.poke-profile-image h2 {
+  padding-left: 40px;
+}
+.poke-profile-information {
+  float: right;
+  width: 400px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.well {
+  overflow: hidden;
+}

@@ -1,0 +1,13 @@
+<div class="row">
+  {{#each pokemon as |mon|}}
+    <div class="col-md-4">
+      <div class="pokemon-profile">
+        <img src="{{mon.imageURL}}"
+             class="pokemon-profile">
+        {{mon.name}}
+        {{mon.hotVotes}}
+      </div>
+    </div>
+  {{/each}}
+</div>
+

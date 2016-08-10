@@ -1,21 +1,22 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1>PokeHOT or PokeNOT?</h1>
-    <p>
-      YOU BE THE JUDGE. Pokemon are either hot or not. what do you say?
-    </p>
+<div class="container" style="text-align: center">
+  <img src="/assets/images/logo2.png" alt="">
+  <div class="jumbotron" style="background: white;">
+    <div class="container">
+      <p>
+      The Premier pokemon hotness rating application. Where you get to choose
+      which pokemon is TRULY the hottest. Is it Charmander? Pikachu? You get to
+      decide!
+      </p>
 
-    <p>
-      {{#link-to "pokemon.rate" class="btn btn-primary btn-lg"}}
-        Check it out
-      {{/link-to}}
-    </p>
+      <p>
+        {{#link-to "pokemon.rate" class="btn btn-primary btn-lg"}}
+          Rate one now!
+        {{/link-to}}
+      </p>
+    </div>
   </div>
+
+  <h1>Current Hottest Pokemon</h1>
+  <hr>
+  {{pokemon-list pokemon=sortedPokemon}}
 </div>
-
-{{#each model as |pokemon|}}
-  {{pokemon.name}}
-  {{pokemon.imageURL}}
-{{/each}}
-
-{{outlet}}

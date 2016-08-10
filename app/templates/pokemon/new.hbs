@@ -1,10 +1,20 @@
-{{#bs-form layout="horizontal" action=(route-action "save")}}
-  {{#bs-form-group}}
-    <label class="control-label">Name</label>
-    {{bs-input type="text" value=model.name}}
-    <label class="control-label">Image URL</label>
-    {{bs-input type="text" value=model.imageURL}}
-  {{/bs-form-group}}
-  {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
-{{/bs-form}}
-{{outlet}}
+<div class="well well-lg">
+  <h2>Create a New Pokemon!</h2>
+  <span>I sure hope it's sexy...</span>
+  <hr>
+  {{#bs-form layout="horizontal" action="save"}}
+    {{#bs-form-group}}
+      <label class="control-label">Name</label>
+      {{bs-input type="text" value=name}}
+      <label class="control-label">Image URL</label>
+      {{bs-input type="text" value=imageURL}}
+      <label class="control-label">Bio</label>
+      <br>
+      <span>Something ... steamy to tell everyone about?</span>
+      {{bs-textarea type="text" rows="4" value=bio}}
+    {{/bs-form-group}}
+    {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+  {{/bs-form}}
+</div>
+
+{{pokemon-list pokemon=model}}

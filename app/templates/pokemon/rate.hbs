@@ -1,4 +1,54 @@
-{{#each model as |pokemon|}}
-  {{pokemon.name}}
-  {{pokemon.imageURL}}
-{{/each}}
+{{#if isInitialScreen}}
+  <div class="jumbotron">
+    <h1>Gotta rate 'em all!</h1>
+    <p>These pokemon have been waiting to be judged by neckbeards just like
+    <strongstrong>you</strongstrong>. Rate as many as you want. Your selection
+    will be random, and discrete.</p>
+    <p>
+      <a {{action "getRandomPokemon"}}
+       class="btn btn-primary btn-lg"
+       href="#" role="button">
+        Rate Now!!
+      </a>
+    </p>
+  </div>
+{{else}}
+  <div class="well">
+    <div class="poke-profile-image">
+      <h2>
+        {{currentPokemon.name}}
+      </h2>
+      <hr>
+      <img src="{{currentPokemon.imageURL}}"
+          class="pokemon-large-profile">
+    </div>
+    <div class="poke-profile-information">
+      <ul>
+        <h3>
+          Current Standing:
+        </h3>
+        <li>
+          Hot Votes:
+          {{currentPokemon.hotVotes}}
+        </li>
+        <li>
+          Not Votes:
+          {{currentPokemon.notVotes}}
+        </li>
+        <li>
+          <h3>
+            Bio:
+          </h3>
+          {{currentPokemon.bio}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <a href="#" {{action "getRandomPokemon"}}>Next Random Pokemon</a>
+  {{#if voted}}
+    YOU VOTED BITCH
+  {{else}}
+    <a href="#" {{action "vote" "hotVotes"}}>HOT!!</a>
+    <a href="#" {{action "vote" "notVotes"}}>NOT :(</a>
+  {{/if}}
+{{/if}}
