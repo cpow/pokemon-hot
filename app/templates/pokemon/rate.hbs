@@ -44,11 +44,23 @@
       </ul>
     </div>
   </div>
-  <a href="#" {{action "getRandomPokemon"}}>Next Random Pokemon</a>
   {{#if voted}}
-    YOU VOTED BITCH
+    <div style="text-align:center;font-size:24px;">
+      <div class="alert alert-success">
+        Thanks for voting!
+        <a href="#" {{action "getRandomPokemon"}}>
+          Now go rate another pokemon!
+        </a>
+      </div>
+    </div>
   {{else}}
-    <a href="#" {{action "vote" "hotVotes"}}>HOT!!</a>
-    <a href="#" {{action "vote" "notVotes"}}>NOT :(</a>
+    <div style="text-align:center;">
+      <div style="float:left;">
+        <a href="#" class="btn btn-info btn-lg" {{action "vote" "hotVotes"}}>HOT!!</a>
+      </div>
+      <div style="float:right;">
+        <a href="#" class="btn btn-danger btn-lg" {{action "vote" "notVotes"}}>NOT :(</a>
+      </div>
+    </div>
   {{/if}}
 {{/if}}
