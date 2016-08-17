@@ -11,11 +11,12 @@ export default Ember.Controller.extend({
         bio: this.get('bio'),
       });
       pokemon.save();
-      this.get('flashMessages').success("good job!")
+      this.get('flashMessages').success("good job!");
 
       this.setProperties({
         name: '',
         imageURL: '',
+        bio: '',
       });
     },
   }

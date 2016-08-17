@@ -6,7 +6,7 @@
     will be random, and discrete.</p>
     <p>
       <a {{action "getRandomPokemon"}}
-       class="btn btn-primary btn-lg"
+       class="btn btn-primary btn-lg continue-to-rating"
        href="#" role="button">
         Rate Now!!
       </a>
@@ -15,7 +15,7 @@
 {{else}}
   <div class="well">
     <div class="poke-profile-image">
-      <h2>
+      <h2 class="name">
         {{currentPokemon.name}}
       </h2>
       <hr>
@@ -29,11 +29,15 @@
         </h3>
         <li>
           Hot Votes:
-          {{currentPokemon.hotVotes}}
+          <div class="hot-votes">
+            {{currentPokemon.hotVotes}}
+          </div>
         </li>
         <li>
           Not Votes:
-          {{currentPokemon.notVotes}}
+          <div class="not-votes">
+            {{currentPokemon.notVotes}}
+          </div>
         </li>
         <li>
           <h3>
@@ -48,7 +52,7 @@
     <div style="text-align:center;font-size:24px;">
       <div class="alert alert-success">
         Thanks for voting!
-        <a href="#" {{action "getRandomPokemon"}}>
+        <a href="#" class="get-more-pokemon" {{action "getRandomPokemon"}}>
           Now go rate another pokemon!
         </a>
       </div>
