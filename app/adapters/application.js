@@ -5,11 +5,9 @@ import config from '../config/environment';
 let adapter;
 
 if (config.environment === 'test'){
-  adapter = DS.JSONAPIAdapter.extend({
-  });
+  adapter = DS.JSONAPIAdapter.extend({});
 } else {
-  adapter = FirebaseAdapter.extend({
-  });
+  adapter = FirebaseAdapter.extend({});
 }
 
 export default adapter;
